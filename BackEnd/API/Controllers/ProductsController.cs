@@ -25,9 +25,7 @@ namespace API.Controllers
 
         [HttpPut]
         public async Task<ActionResult<Unit>> Update([FromBody] EditWeight.Command command)
-        {
-            return await _mediator.Send(command);
-        }
+            => await _mediator.Send(command);
 
     }
 }
